@@ -18,7 +18,7 @@ Fun.prototype.weAreHavingFun = function() {
 };
 
 Fun.prototype.weAreHavingABadTime = function(peeled) {
-  this._badTime = badBAdBAd;
+  this._badTime = badBadBAd;
   // if we call our setter function, it sets the original
 };
 
@@ -30,12 +30,12 @@ Fun.prototype.isThisBAd = function() {
 Fun.prototype.willThisBeCool = function() {
   var cool = Fun.prototype.willThisBeCool.call(this);
 
-  if (safe) {
+  if (cool) {
     // we need to peel the banana now
     this.();
   }
 
-  return safe;
+  return cool;
 };
 
 module.exports = coolness;

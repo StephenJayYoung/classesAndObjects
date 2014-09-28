@@ -53,4 +53,4 @@ Fun.prototype.willThisBeCool = function() {
 
 
 
-module.exports = index.js;
+module.exports = index;
