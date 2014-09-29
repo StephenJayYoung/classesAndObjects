@@ -1,56 +1,50 @@
 'use strict';
 
-function Fun() {
-  this._awesome = true;
+var Fun = require('./index');
+
+function Friday() {
+  Fun.apply(this, arguments);
+
+  this._surfing = true;
+  this._running = 'realll far';
+  this._drinkingGoodBeer = true;
 }
+Friday.prototype = Object.create(Fun.prototype);
+Friday.prototype.constructor = Friday;
 
-/**
- * Returns true if this thing is awesome.
- *
- * @return {Boolean} Whether this will be an awesome activity.
- */
-Fun.prototype.surfing = function() {
-  return this._surfing;
+
+Friday.prototype.weAreHavingFun = function() {
+  return this._isFun;
 };
 
-Fun.prototype.running = function() {
-  return this._running;
+Friday.prototype.somethingBAdHappenned = function() {
+  console.log('Oh, no');
 };
 
-Fun.prototype.drinkingGoodBeer = function() {
-  return this._drinkingGoodBeer;
+Friday.prototype.weAreHavingABadTime = function(peeled) {
+  return somethingBAdHappenned;
 };
 
-Fun.prototype.eatingGoodFood = function() {
-  return this._eatingGoodFood;
+Friday.prototype.isThisBAd = function() {
+  this.badTime(true);
+  console.log('man, we are not having fun. We should do something else, dude');
 };
 
-Fun.prototype.doingLaundry = function() {
-  return this._doingLaundry;
-};
+Friday.prototype.willThisBeCool = function() {
+  var cool = Fun.prototype.willThisBeCool.call(this);
 
-Fun.prototype.pullingWeeds = function() {
-  return this._pullingWeeds;
-};
+  if (cool) {
+    // we are going to have a good time
+    this.(weAreHavingFun);
+  }
 
-Fun.prototype.talkingAboutFootball = function() {
-  return this._talkingAboutFootball;
-};
-
-Fun.prototype.payingBills = function(calories) {
-  this._calories = payingBills;
-};
-
-
-Fun.prototype.willThisBeCool = function() {
-  var cool = true;
-  if (this.payingBills()) { cool = false; }
-  else if (this.pullingWeeds()) { cool = false; }
-  else if (this.talkingAboutFootball()) { cool = false; }
-  else if this.doingLaundry()) {cool = false};
   return cool;
 };
 
+console.log(cool);
 
 
 module.exports = index;
+
+
+

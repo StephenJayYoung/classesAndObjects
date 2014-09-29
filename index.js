@@ -1,41 +1,72 @@
 'use strict';
 
-var Fun = require('./coolness');
-
-function Saturday() {
-  Fun.apply(this, arguments);
-
-  this._surfing = true;
-  this._running = 'realll far';
-  this._drinkingGoodBeer = true;
+function Fun() {
+  this._awesome = true;
 }
-Friday.prototype = Object.create(Fun.prototype);
-Friday.prototype.constructor = Friday;
 
+/**
+ * Returns true if this thing is awesome.
+ *
+ * @return {Boolean} Whether this will be an awesome activity.
+ */
 
-Fun.prototype.weAreHavingFun = function() {
-  return this._isFun;
+//setters set a value of a property (use return), getters provide a value of a property (use ._this)
+
+Fun.prototype.surfing = function() {
+  return this._surfing;
 };
 
-Fun.prototype.weAreHavingABadTime = function(peeled) {
-  this._badTime = badBadBAd;
-  // if we call our setter function, it sets the original
+Fun.prototype.running = function() {
+  return this._running;
 };
 
-Fun.prototype.isThisBAd = function() {
-  this.badTime(true);
-  console.log('man, we are not having fun. We should do something else, dude');
+Fun.prototype.drinkingGoodBeer = function() {
+  return this._drinkingGoodBeer;
 };
+
+Fun.prototype.eatingGoodFood = function() {
+  return this._eatingGoodFood;
+};
+
+Fun.prototype.doingLaundry = function() {
+  return this._doingLaundry;
+};
+
+Fun.prototype.setdoingLaundry = function() {
+  this.doingLaundry = doingLaundry;
+}
+
+Fun.prototype.pullingWeeds = function() {
+  return this._pullingWeeds;
+};
+
+Fun.prototype.talkingAboutFootball = function() {
+  return this._talkingAboutFootball;
+};
+
+Fun.prototype.PayingBills = function(calories) {
+  return this._payingBills;
+};
+
+Fun.prototype.setTimeToPayBills = function(time) {
+  this._payingBills = payingBills;
+};
+
+Fun.prototype.setFoodToEat = function(foods) {
+  this._foodToEat = eatingGoodFood;
+};
+
 
 Fun.prototype.willThisBeCool = function() {
-  var cool = Fun.prototype.willThisBeCool.call(this);
-
-  if (cool) {
-    // we need to peel the banana now
-    this.();
-  }
-
+  var cool = true;
+  if (this.payingBills()) { cool = false; }
+  else if (this.pullingWeeds()) { cool = false; }
+  else if (this.talkingAboutFootball()) { cool = false; }
+  else if this.doingLaundry()) {cool = false};
+};
   return cool;
 };
+
+
 
 module.exports = coolness;
